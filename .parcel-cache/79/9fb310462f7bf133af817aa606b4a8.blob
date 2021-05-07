@@ -1057,13 +1057,34 @@ try {
   var _jsxFileName = "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\index.jsx";
   // Main component (will eventually use all the others)
   class MyFlixApplication extends _reactDefault.default.Component {
+    constructor() {
+      super();
+      this.state = {
+        movies: [{
+          _id: 1,
+          Title: 'How to Marry a Millionaire',
+          Description: 'A comedy film is a category of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect.',
+          ImagePath: '...'
+        }, {
+          _id: 2,
+          Title: 'Niagara',
+          Description: 'desc2...',
+          ImagePath: '...'
+        }, {
+          _id: 3,
+          Title: 'The Seven Year Itch',
+          Description: 'desc3...',
+          ImagePath: '...'
+        }]
+      };
+    }
     render() {
       return (
         /*#__PURE__*/_reactDefault.default.createElement(_componentsMainViewMainView.MainView, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 24,
             columnNumber: 7
           }
         })
@@ -26286,131 +26307,44 @@ try {
   });
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _movieCardMovieCardJsx = require('../movie-card/movie-card.jsx');
-  var _movieViewMovieView = require('../movie-view/movie-view');
   var _jsxFileName = "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\main-view\\main-view.jsx";
   class MainView extends _reactDefault.default.Component {
-    constructor() {
-      super();
-      this.state = {
-        movies: [{
-          _id: 1,
-          Title: 'How to Marry a Millionaire',
-          Description: 'How to Marry a Millionaire is a 1953 American romantic comedy film.',
-          Genre: 'Comedy',
-          Director: 'Jean Negulesco',
-          ImagePath: 'https://m.media-amazon.com/images/M/MV5BZTM0MGU1MjgtMDJiMy00N2RkLWFiZDMtMmY5MGE5MGRmNzEwXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        }, {
-          _id: 2,
-          Title: 'Niagara',
-          Description: 'As two couples are visiting Niagara Falls, tensions between one wife and her husband reach the level of murder.',
-          Genre: 'Thriller',
-          Director: 'Henry Hathaway',
-          ImagePath: 'https://m.media-amazon.com/images/M/MV5BMDBhNWE4Y2UtMTA5Mi00YzYyLTliMWMtMjc3OGU0ZWFiMGVhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        }, {
-          _id: 3,
-          Title: 'The Seven Year Itch',
-          Description: 'When his family goes away for the summer, a hitherto faithful husband with an overactive imagination is tempted by a beautiful neighbbor.',
-          Genre: 'Comedy',
-          Director: 'Billy Wilder',
-          ImagePath: 'https://m.media-amazon.com/images/M/MV5BZTJkMTBkNmYtYjdkZi00YjU1LWE5YWMtZGZhYWVmNzk4NzY3XkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        }],
-        selectedMovie: null
-      };
-    }
-    setSelectedMovie(newSelectedMovie) {
-      this.setState({
-        selectedMovie: newSelectedMovie
-      });
-    }
     render() {
-      const {movies, selectedMovie} = this.state;
-      if (movies.length === 0) return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "main-view",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 28,
-            columnNumber: 37
-          }
-        }, "This list is empty!")
-      );
       return (
         /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "main-view",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32,
+            lineNumber: 7,
             columnNumber: 7
           }
-        }, selectedMovie ? /*#__PURE__*/_reactDefault.default.createElement(_movieViewMovieView.MovieView, {
-          movie: selectedMovie,
-          onBackClick: newSelectedMovie => {
-            this.setSelectedMovie(newSelectedMovie);
-          },
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34,
-            columnNumber: 13
+            lineNumber: 8,
+            columnNumber: 9
           }
-        }) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_movieCardMovieCardJsx.MovieCard, {
-          key: movie._id,
-          movie: movie,
-          onMovieClick: movie => {
-            this.setSelectedMovie(movie);
-          },
+        }, "How to Marry a Millionaire"), /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36,
-            columnNumber: 13
+            lineNumber: 9,
+            columnNumber: 9
           }
-        })))
+        }, "Niagara"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 9
+          }
+        }, "The Seven Year Itch"))
       );
     }
   }
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","../movie-card/movie-card.jsx":"7v6h3","../movie-view/movie-view":"3xBbr","@parcel/transformer-js/lib/esmodule-helpers.js":"l0YbV","../../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5aez5"}],"7v6h3":[function(require,module,exports) {
-var helpers = require("../../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  _parcelHelpers.export(exports, "MovieCard", function () {
-    return MovieCard;
-  });
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx";
-  class MovieCard extends _reactDefault.default.Component {
-    render() {
-      const {movie, onMovieClick} = this.props;
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "movie-card",
-          onClick: () => {
-            onMovieClick(movie);
-          },
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 6,
-            columnNumber: 12
-          }
-        }, movie.Title)
-      );
-    }
-  }
+  exports.default = MainView;
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
@@ -26616,116 +26550,6 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"6nJqq"}],"3xBbr":[function(require,module,exports) {
-var helpers = require("../../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  _parcelHelpers.export(exports, "MovieView", function () {
-    return MovieView;
-  });
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\movie-view\\movie-view.jsx";
-  class MovieView extends _reactDefault.default.Component {
-    render() {
-      const {movie, onBackClick} = this.props;
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "movie-view",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9,
-            columnNumber: 7
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "movie-poster",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 10,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: movie.ImagePath,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 11,
-            columnNumber: 11
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "movie-title",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 13,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
-          className: "label",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14,
-            columnNumber: 11
-          }
-        }, "Title: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
-          className: "value",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 15,
-            columnNumber: 11
-          }
-        }, movie.Title)), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "movie-description",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 17,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
-          className: "label",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 18,
-            columnNumber: 11
-          }
-        }, "Description: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
-          className: "value",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 19,
-            columnNumber: 11
-          }
-        }, movie.Description)), /*#__PURE__*/_reactDefault.default.createElement("button", {
-          onClick: () => {
-            onBackClick(null);
-          },
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 21,
-            columnNumber: 9
-          }
-        }, "Back"))
-      );
-    }
-  }
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"l0YbV","../../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5aez5"}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire279c")
+},{"react-refresh/runtime":"6nJqq"}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire279c")
 
 //# sourceMappingURL=index.js.map
