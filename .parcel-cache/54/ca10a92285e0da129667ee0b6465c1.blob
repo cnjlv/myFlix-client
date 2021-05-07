@@ -1052,28 +1052,21 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _reactDom = require('react-dom');
   var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
-  require('./components/main-view/main-view');
+  var _componentsMainViewMainView = require('./components/main-view/main-view');
   require('./index.scss');
   var _jsxFileName = "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\index.jsx";
   // Main component (will eventually use all the others)
   class MyFlixApplication extends _reactDefault.default.Component {
     render() {
       return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
+        /*#__PURE__*/_reactDefault.default.createElement(_componentsMainViewMainView.MainView, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 12,
             columnNumber: 7
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 12,
-            columnNumber: 12
-          }
-        }, "Welcome,Camelia"))
+        })
       );
     }
   }
