@@ -26529,14 +26529,14 @@ try {
     }
     render() {
       const {movies, selectedMovie} = this.state;
-      if (!this.state.user) return (
+      if (!user) return (
         /*#__PURE__*/_reactDefault.default.createElement(_loginViewLoginViewJsx.LoginView, {
           onLoggedIn: user => this.onLoggedIn(user),
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 54,
-            columnNumber: 34
+            columnNumber: 23
           }
         })
       );
@@ -28431,7 +28431,7 @@ try {
   }
   _s(LoginView, "wuQOK7xaXdVz4RMrZQhWbI751Oc=");
   _c = LoginView;
-  LoginView.propTypes = {
+  LoginView.PropTypes = {
     user: _propTypesDefault.default.shape({
       Username: _propTypesDefault.default.string.isRequired,
       Password: _propTypesDefault.default.string.isRequired
@@ -29561,4 +29561,4 @@ try {
 
 },{"react":"3b2NM","prop-types":"4dfy5","./movie-view.scss":"4iZ2Z","@parcel/transformer-js/lib/esmodule-helpers.js":"l0YbV","../../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5aez5"}],"4iZ2Z":[function() {},{}],"3X8QW":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire279c")
 
-//# sourceMappingURL=index.02675e63.js.map
+//# sourceMappingURL=index.HASH_REF_f9eab60bc3a7a7c3f683683702675e63.js.map
