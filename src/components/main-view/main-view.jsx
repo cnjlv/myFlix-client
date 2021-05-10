@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-import { LoginView } from '../login-view/login-view';
-import { RegistrationView } from '../registration-view/registration-view'
-import { MovieCard } from '../movie-card/movie-card';
-import { MovieView } from '../movie-view/movie-view';
+import { LoginView } from '../login-view/login-view.jsx';
+import { RegistrationView } from '../registration-view/registration-view.jsx'
+import { MovieCard } from '../movie-card/movie-card.jsx';
+import { MovieView } from '../movie-view/movie-view.jsx';
 
 import "./main-view.scss";
 
@@ -51,7 +51,7 @@ export class MainView extends React.Component {
  render() {
     const { movies, selectedMovie } = this.state;
     
-    if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+    if (!this.state.user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
 
     if (!register) return <RegistrationView onRegister={register => this.onRegister(register)} />;
 
