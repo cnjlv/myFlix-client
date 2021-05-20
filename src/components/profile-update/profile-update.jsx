@@ -144,7 +144,7 @@ export function ProfileUpdate(props) {
             );
           })}
         </Form.Group>
-        <Link to={`/users/`}>
+        <Link to={`/users`}>
           <Button
             variant="dark"
             type="submit"
