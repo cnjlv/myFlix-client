@@ -2,12 +2,17 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import {NavbarView} from "../navbar-view/navbar-view";
 
 
 export class DirectorView extends React.Component {
   render() {
     const { director, movies, onBackClick } = this.props;
     return (
+      <div>
+        <div>
+      <NavbarView />
+      </div>
       <div className="director-view">
         <div className="director-name">
           <span className="label">Name: </span>
@@ -26,6 +31,7 @@ export class DirectorView extends React.Component {
           <span className="value">{director.Death}</span>
         </div>
         <Button variant="dark" onClick={() => { onBackClick(null) }}>Back</Button>
+      </div>
       </div>
     );
   }
