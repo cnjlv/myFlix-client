@@ -13,7 +13,9 @@ export class DirectorView extends React.Component {
         <div>
       <NavbarView />
       </div>
-      <div className="director-view">
+      <div className="director-view" style={{
+                  marginTop: '70px',
+                }}>
         <div className="director-name">
           <span className="label">Name: </span>
           <span className="value">{director.Name}</span>
