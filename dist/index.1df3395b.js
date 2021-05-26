@@ -27021,6 +27021,8 @@ var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _container = require("react-bootstrap/Container");
+var _containerDefault = parcelHelpers.interopDefault(_container);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _reactRouterDom = require("react-router-dom");
@@ -27067,23 +27069,45 @@ function LoginView(props) {
         setPasswordError(passwordError1);
         return isValid;
     };
-    return(/*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
+    return(/*#__PURE__*/ _reactDefault.default.createElement(_containerDefault.default, {
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 58
+            lineNumber: 59
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+        style: {
+            textAlign: 'center',
+            fontWeight: 'bold',
+            letterSpacing: '10px',
+            paddingTop: '50px'
+        },
+        __source: {
+            fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 60
+        },
+        __self: this
+    }, "Marilyn's top 10"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
+        style: {
+            justifyContent: 'center',
+            paddingTop: '8%'
+        },
+        __source: {
+            fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 70
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
         controlId: "formUsername",
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 59
+            lineNumber: 74
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 60
+            lineNumber: 75
         },
         __self: this
     }, "Username"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
@@ -27092,7 +27116,7 @@ function LoginView(props) {
         ,
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 61
+            lineNumber: 76
         },
         __self: this
     })), Object.keys(usernameError).map((key)=>{
@@ -27100,7 +27124,7 @@ function LoginView(props) {
             key: key,
             __source: {
                 fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-                lineNumber: 66
+                lineNumber: 81
             },
             __self: this
         }, usernameError[key]));
@@ -27108,13 +27132,13 @@ function LoginView(props) {
         controlId: "formPassword",
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 72
+            lineNumber: 87
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 73
+            lineNumber: 88
         },
         __self: this
     }, "Password"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
@@ -27123,7 +27147,7 @@ function LoginView(props) {
         ,
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 74
+            lineNumber: 89
         },
         __self: this
     })), Object.keys(passwordError).map((key)=>{
@@ -27131,7 +27155,7 @@ function LoginView(props) {
             key: key,
             __source: {
                 fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-                lineNumber: 79
+                lineNumber: 94
             },
             __self: this
         }, usernameError[key]));
@@ -27141,24 +27165,27 @@ function LoginView(props) {
         onClick: handleSubmit,
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 85
+            lineNumber: 100
         },
         __self: this
     }, "Login"), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
         to: `/register`,
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 87
+            lineNumber: 102
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
         variant: "dark",
+        style: {
+            marginLeft: '5px'
+        },
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 88
+            lineNumber: 103
         },
         __self: this
-    }, "New here? Register"))));
+    }, "New here? Register")))));
 }
 _s(LoginView, "Lnry4UU+NkjRgin55tt8rHmJj2o=");
 _c = LoginView;
@@ -27177,7 +27204,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","axios":"7rA65","react-router-dom":"1PMSK","./login-view.scss":"4Dl6p","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6A5ko":[function(require,module,exports) {
+},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","axios":"7rA65","react-router-dom":"1PMSK","./login-view.scss":"4Dl6p","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-bootstrap/Container":"3Mt3t"}],"6A5ko":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -28393,7 +28420,41 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"592mh"}],"24Iu5":[function(require,module,exports) {
+},{"react-refresh/runtime":"592mh"}],"3Mt3t":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+var _classnames = _interopRequireDefault(require("classnames"));
+var _react = _interopRequireDefault(require("react"));
+var _ThemeProvider = require("./ThemeProvider");
+var defaultProps = {
+    fluid: false
+};
+var Container = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, fluid = _ref.fluid, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, className = _ref.className, props = _objectWithoutPropertiesLoose2.default(_ref, [
+        "bsPrefix",
+        "fluid",
+        "as",
+        "className"
+    ]);
+    var prefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'container');
+    var suffix = typeof fluid === 'string' ? "-" + fluid : '-fluid';
+    return(/*#__PURE__*/ _react.default.createElement(Component, _extends2.default({
+        ref: ref
+    }, props, {
+        className: _classnames.default(className, fluid ? "" + prefix + suffix : prefix)
+    })));
+});
+Container.displayName = 'Container';
+Container.defaultProps = defaultProps;
+var _default = Container;
+exports.default = _default;
+module.exports = exports["default"];
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"24Iu5":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31555,41 +31616,7 @@ var _default = AbstractNavItem;
 exports.default = _default;
 module.exports = exports["default"];
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","@restart/hooks/useEventCallback":"3v8B9","warning":"5jojS","./NavContext":"7zQ1K","./SelectableContext":"3ATFf"}],"3Mt3t":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _react = _interopRequireDefault(require("react"));
-var _ThemeProvider = require("./ThemeProvider");
-var defaultProps = {
-    fluid: false
-};
-var Container = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, fluid = _ref.fluid, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, className = _ref.className, props = _objectWithoutPropertiesLoose2.default(_ref, [
-        "bsPrefix",
-        "fluid",
-        "as",
-        "className"
-    ]);
-    var prefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'container');
-    var suffix = typeof fluid === 'string' ? "-" + fluid : '-fluid';
-    return(/*#__PURE__*/ _react.default.createElement(Component, _extends2.default({
-        ref: ref
-    }, props, {
-        className: _classnames.default(className, fluid ? "" + prefix + suffix : prefix)
-    })));
-});
-Container.displayName = 'Container';
-Container.defaultProps = defaultProps;
-var _default = Container;
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"7gcHQ":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","@restart/hooks/useEventCallback":"3v8B9","warning":"5jojS","./NavContext":"7zQ1K","./SelectableContext":"3ATFf"}],"7gcHQ":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
