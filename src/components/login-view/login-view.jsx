@@ -17,17 +17,19 @@ export function LoginView(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const isValid = formValidation();
-    if (isValid) {
+     if (isValid) {
     axios.post('https://cnjlv.herokuapp.com/login', {
       Username: username,
       Password: password
     })
     .then(response => {
       const data = response.data;
+      console.log('data', data);
       props.onLoggedIn(data);
+      window.open("/");
     })
     .catch(e => {
-      console.log('no such user')
+      console.log('error',e)
     });
     }
   };
@@ -59,13 +61,13 @@ export function LoginView(props) {
         <Form.Control type="text" onChange={e => setUsername(e.target.value)} />
       </Form.Group>
 
-      {Object.keys(usernameError).map((key) => {
-        return (
-          <div key={key}>
-            {usernameError[key]}
-          </div>
-        );
-      })}
+     {Object.keys(usernameError).map((key) => {
+          return (
+            <div key={key}>
+              {usernameError[key]}
+            </div>
+          );
+        })}
 
       <Form.Group controlId="formPassword">
         <Form.Label>Password</Form.Label>

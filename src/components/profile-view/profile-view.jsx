@@ -5,6 +5,9 @@ import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import {NavbarView} from "../navbar-view/navbar-view";
+import { connect } from 'react-redux';
+import { setUser } from '../../actions/actions';
 
 export class ProfileView extends React.Component {
 
@@ -12,6 +15,7 @@ export class ProfileView extends React.Component {
     super();
     this.state = {
       username: "",
+      password: "",
       email: "",
       birthday: "",
       favoriteMovies: [],
@@ -20,31 +24,42 @@ export class ProfileView extends React.Component {
   }
 
   componentDidMount() {
-    this.getUser();
+    let accessToken = localStorage.getItem('token');
+    this.getUser(accessToken);
   }
 
-  getUser() {
-    this.setState({
-      username: localStorage.getItem("user"),
-      email: localStorage.getItem("email"),
-      birthday: localStorage.getItem('birthday'),
-      favoriteMovies: localStorage.getItem("favoriteMovies"),
-    });
-  }
-
-  removeFavorite(movie) {
-    let token = localStorage.getItem("token");
+  getUser(token) {
     let url =
-      "https://cnjlv.herokuapp.com/users/" +
-      localStorage.getItem("user") + "/favourites/" +
-      movie._id;
-    axios.delete(url, {
+      'https://cnjlv.herokuapp.com/users/' +
+      localStorage.getItem('user');
+    axios
+      .get(url, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
-        console.log(response);
-        let myMovies = response.data.FavoriteMovies;
-        localStorage.setItem('favoriteMovies', myMovies);
+        this.setState({
+          username: response.data.Username,
+          password: response.data.Password,
+          email: response.data.Email,
+          birthday: response.data.Birthday,
+          favoriteMovies: response.data.FavoriteMovies,
+        });
+      });
+  }
+
+  removeFavorite(movie) {
+    let token = localStorage.getItem('token');
+    let url =
+      'https://cnjlv.herokuapp.com/users/' +
+      localStorage.getItem('user') +
+      '/favorites/' +
+      movie._id;
+    axios
+      .delete(url, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
+        alert('Movie was removed');
         this.componentDidMount();
       });
   }
@@ -73,7 +88,12 @@ export class ProfileView extends React.Component {
     });
     return (
       <div>
-        <Form>
+      <div>
+      <NavbarView />
+      </div>
+        <Form style={{
+                  marginTop: '70px',
+                }}>
           <Form.Group controlId="formBasicUsername">
             <h4>Username: </h4>
             <Form.Label>{this.state.username}</Form.Label>
@@ -87,13 +107,23 @@ export class ProfileView extends React.Component {
             <Form.Label>{this.state.birthday}</Form.Label>
           </Form.Group>
           <Link to={`/update/${this.state.username}`}>
-            <Button>Edit Information</Button>
+            <Button variant="dark" style={{
+                  margin: '5px',
+                }}>Edit Information</Button>
           </Link>
-          <Button variant="dark" onClick={() => { this.handleDelete() }}>Delete Profile</Button>
-          <Button variant="dark" onClick={() => { onBackClick() }}>Back</Button>
+          <Button variant="dark" onClick={() => { this.handleDelete() }} style={{
+                  margin: '5px',
+                }}>Delete Profile</Button>
+          <Button variant="dark" onClick={() => { onBackClick() }} style={{
+                  margin: '5px',
+                }}>Back</Button>
         </Form>
-        <div>
-          <h5>Favorite Movies:</h5>
+        <div style={{
+                  margin: '5px',
+                }}>
+          <h5 style={{
+                  margin: '5px',
+                }}>Favorite Movies:</h5>
           {favoriteMovieList.map((movie) => {
             return (
               <Col md={3} key={movie._id}>
@@ -105,9 +135,13 @@ export class ProfileView extends React.Component {
                     </Link>
                   </Card.Body>
                 </Card>
-                <Button onClick={() => this.removeFavorite(movie)}>
+                <div>
+                <Button variant="dark" onClick={() => this.removeFavorite(movie)} style={{
+                  margin: '5px',
+                }}>
                   Remove
                 </Button>
+                </div>
               </Col>
             );
           })}
@@ -116,3 +150,9 @@ export class ProfileView extends React.Component {
     )
   }
 }
+
+let mapStateToProps = state => {
+  return { users: state.users }
+}
+
+export default connect(mapStateToProps, { setUser } )(ProfileView);
