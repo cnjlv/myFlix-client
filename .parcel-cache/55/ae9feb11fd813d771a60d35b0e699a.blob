@@ -28503,7 +28503,7 @@ function RegistrationView(props) {
             console.log(data);
             window.open('/', '_self');
         }).catch((e1)=>{
-            console.log('Registration failed');
+            alert('Registration failed');
         });
     };
     const formValidation = ()=>{
@@ -28670,9 +28670,6 @@ function RegistrationView(props) {
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
         variant: "dark",
-        style: {
-            marginLeft: '5px'
-        },
         __source: {
             fileName: "C:\\Users\\camel\\Documents\\GitHub\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
             lineNumber: 116
@@ -34455,4 +34452,4 @@ exports.devToolsEnhancer = typeof window !== 'undefined' && window.__REDUX_DEVTO
 
 },{"redux":"7panR"}],"6LvMu":[function() {},{}]},["1j6wU","CtQ9N","2Njqc"], "2Njqc", "parcelRequire279c")
 
-//# sourceMappingURL=index.1df3395b.js.map
+//# sourceMappingURL=index.HASH_REF_c9bcb45eb8c69e8a62893cdb1df3395b.js.map
