@@ -1,10 +1,3 @@
-
-
-.movie-view {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
 .director-name {
   font-size: 25px;
   display: flex;
@@ -22,12 +15,3 @@
   margin-top: 70px;
   width: 100%;
 }
-
-.my-flix {
-  color: steelblue;
-}
-
-.homePage {
-  margin-top: 80px;
-}
-/*# sourceMappingURL=index.c288ca04.css.map */
