@@ -19,3 +19,26 @@
 ## Tools used
 #### React, Redux, React Boostrap, Parcel
 
+### Getting Started
+##### Requirements:
+##### - Node.js
+##### - Parcel bundler
+``` 
+npm install --g parcel-bundler 
+```
+### Setup
+##### Start by cloning this repository and installing dependencies
+``` 
+npm install
+```
+### Building app
+##### To get the app running run the following command:
+``` 
+parcel src/index.html
+```
+
+### Running app in browser
+##### The app will be running on:
+``` 
+http://localhost:1234/
+```
